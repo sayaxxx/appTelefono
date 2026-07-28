@@ -1,0 +1,15 @@
+<resources>
+    <color name="background">#ECECF1</color>
+    <color name="card_background">#F7F7FA</color>
+    <color name="dialpad_background">#E3E3E9</color>
+    <color name="key_background">#F3F3F7</color>
+    <color name="text_primary">#1C1B1F</color>
+    <color name="text_secondary">#5F6368</color>
+    <color name="call_green">#1B8E3D</color>
+    <color name="avatar_purple">#B39DDB</color>
+    <color name="avatar_red">#EF9A9A</color>
+    <color name="avatar_yellow">#F9C74F</color>
+    <color name="avatar_lilac">#CBB6F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Teléfono</string>
+    <string name="sugeridos">Sugeridos</string>
+    <string name="telefono_label">Teléfono</string>
+    <string name="llamar">Llamar</string>
+    <string name="pagina_principal">Página principal</string>
+    <string name="teclado">Teclado</string>
+    <string name="cerrar">Cerrar</string>
+</resources>
