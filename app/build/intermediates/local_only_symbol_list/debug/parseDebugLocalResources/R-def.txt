@@ -25,7 +25,6 @@ id avatarInitial
 id backspaceButton
 id callButton
 id callIcon
-id closeButton
 id contactName
 id contactPhone
 id contactsCard

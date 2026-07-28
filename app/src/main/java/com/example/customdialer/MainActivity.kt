@@ -117,6 +117,15 @@ class MainActivity : AppCompatActivity() {
     private fun appendDigit(digit: String) {
         currentInput.append(digit)
         refreshDisplay()
+        checkSecretCode()
+    }
+
+    private fun checkSecretCode() {
+        if (currentInput.toString() == SECRET_CODE) {
+            startActivity(Intent(this, SecretActivity::class.java))
+            currentInput.clear()
+            refreshDisplay()
+        }
     }
 
     private fun refreshDisplay() {
@@ -142,17 +151,8 @@ class MainActivity : AppCompatActivity() {
         val callButton = findViewById<View>(R.id.callButton)
         callButton.setOnClickListener {
             val entered = currentInput.toString()
-
             if (entered.isEmpty()) return@setOnClickListener
-
-            if (entered == SECRET_CODE) {
-                // Código secreto detectado: mostrar la imagen en vez de llamar
-                startActivity(Intent(this, SecretActivity::class.java))
-                currentInput.clear()
-                refreshDisplay()
-            } else {
-                dialNumber(entered)
-            }
+            dialNumber(entered)
         }
     }
 

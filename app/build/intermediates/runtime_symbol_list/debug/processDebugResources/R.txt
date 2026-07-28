@@ -3235,7 +3235,6 @@ int id clear_text 0x7f080077
 int id clip_horizontal 0x7f080078
 int id clip_vertical 0x7f080079
 int id clockwise 0x7f08007a
-int id closeButton 0x7f08007b
 int id closest 0x7f08007c
 int id collapseActionView 0x7f08007d
 int id compress 0x7f08007e

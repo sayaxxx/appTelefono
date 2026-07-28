@@ -1,50 +1,54 @@
 [
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_ic_backspace.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/ic_backspace.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_ic_backspace.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\ic_backspace.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_secret_image.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/secret_image.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\card_background.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_ic_launcher.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/ic_launcher.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_circle_avatar.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\circle_avatar.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/layout_item_contact.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/layout/item_contact.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_key_background.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\key_background.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_circle_call_button.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/circle_call_button.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_circle_avatar.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/circle_avatar.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\layout_item_contact.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\layout\\item_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\layout_activity_secret.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\layout\\activity_secret.xml"
+    },
+    {
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_secret_image.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\secret_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\layout_key_generic.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\layout\\key_generic.xml"
+    },
+    {
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_circle_call_button.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\circle_call_button.xml"
     },
     {
         "merged": "com.example.customdialer.app-debug-32:/layout_activity_secret.xml.flat",
         "source": "com.example.customdialer.app-main-34:/layout/activity_secret.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_card_background.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/card_background.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_key_background.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/key_background.xml"
-    },
-    {
-        "merged": "com.example.customdialer.app-debug-32:/layout_key_generic.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/layout/key_generic.xml"
-    },
-    {
-        "merged": "com.example.customdialer.app-debug-32:/drawable_ic_call.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/drawable/ic_call.xml"
-    },
-    {
-        "merged": "com.example.customdialer.app-debug-32:/layout_activity_main.xml.flat",
-        "source": "com.example.customdialer.app-main-34:/layout/activity_main.xml"
+        "merged": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-debug-32:\\drawable_ic_call.xml.flat",
+        "source": "C:\\Users\\hipho\\.gradle\\daemon\\9.3.0\\com.example.customdialer.app-main-34:\\drawable\\ic_call.xml"
     }
 ]
