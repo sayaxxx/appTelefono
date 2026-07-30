@@ -6,4 +6,12 @@
     <string name="pagina_principal">Página principal</string>
     <string name="teclado">Teclado</string>
     <string name="cerrar">Cerrar</string>
+    <string name="upload_title">Personalizar imagen secreta</string>
+    <string name="upload_subtitle">Elige una foto de tu galería. Se mostrará cada vez que ingreses el código de la imagen.</string>
+    <string name="upload_empty">Sin imagen seleccionada todavía</string>
+    <string name="upload_pick_button">Elegir imagen de la galería</string>
+    <string name="upload_remove_button">Quitar imagen personalizada</string>
+    <string name="upload_saved">Imagen guardada correctamente</string>
+    <string name="upload_removed">Imagen personalizada eliminada</string>
+    <string name="upload_error">No se pudo guardar la imagen</string>
 </resources>

@@ -15,9 +15,14 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     // ---------------------------------------------------------------
-    // CÓDIGO SECRETO.
+    // CÓDIGOS SECRETOS.
     // ---------------------------------------------------------------
-    private val SECRET_CODE = "*#06#"
+
+    // Código que muestra la imagen guardada
+    private val SECRET_CODE_VIEW = "*#06#"
+
+    // Código que abre la pantalla para elegir/cambiar la imagen
+    private val SECRET_CODE_UPLOAD = "*9999#"
 
     private lateinit var dialedNumber: TextView
     private lateinit var backspaceButton: ImageButton
@@ -121,10 +126,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkSecretCode() {
-        if (currentInput.toString() == SECRET_CODE) {
-            startActivity(Intent(this, SecretActivity::class.java))
-            currentInput.clear()
-            refreshDisplay()
+        val entered = currentInput.toString()
+        when (entered) {
+            SECRET_CODE_VIEW -> {
+                startActivity(Intent(this, SecretActivity::class.java))
+                currentInput.clear()
+                refreshDisplay()
+            }
+            SECRET_CODE_UPLOAD -> {
+                startActivity(Intent(this, UploadImageActivity::class.java))
+                currentInput.clear()
+                refreshDisplay()
+            }
         }
     }
 

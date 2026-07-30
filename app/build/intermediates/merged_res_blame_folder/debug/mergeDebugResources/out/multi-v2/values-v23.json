@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.customdialer.app-mergeDebugResources-30:/values-v23/values-v23.xml",
+            "outputFile": "com.example.customdialer.app-mergeDebugResources-34:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hipho\\.gradle\\caches\\9.3.0\\transforms\\0caab161243c89917714ee43293d85dc\\workspace\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.customdialer.app-mergeDebugResources-30:/values-hu/values-hu.xml",
+            "outputFile": "com.example.customdialer.app-mergeDebugResources-34:/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hipho\\.gradle\\caches\\9.3.0\\transforms\\de94a4b6ce243921614888240652f726\\workspace\\transformed\\core-1.13.1\\res\\values-hu\\values-hu.xml",

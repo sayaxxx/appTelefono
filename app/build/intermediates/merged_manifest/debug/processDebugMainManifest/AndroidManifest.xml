@@ -38,6 +38,9 @@
             android:name="com.example.customdialer.SecretActivity"
             android:exported="false"
             android:theme="@style/Theme.CustomDialer.Fullscreen" />
+        <activity
+            android:name="com.example.customdialer.UploadImageActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
