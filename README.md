@@ -89,7 +89,7 @@ CustomDialer/
 
 1. Clona el repositorio:
    ```bash
-   git clone <url-de-tu-repositorio>
+   git clone https://github.com/sayaxxx/appTelefono
    ```
 2. Ábrelo en **Android Studio** (`File → Open`). Se generará el Gradle
    Wrapper automáticamente la primera vez.
