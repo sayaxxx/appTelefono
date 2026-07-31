@@ -1,131 +1,158 @@
-# CustomDialer — Marcador con código secreto
+# 📱 appTelefono — Marcador Android con imagen secreta
 
-App de Android (Kotlin) que replica la interfaz del marcador de teléfono
-(lista de "Sugeridos" + teclado numérico + botón Llamar) y añade dos
-funciones ocultas activadas por códigos secretos:
+Aplicación de Android (Kotlin) que replica la interfaz clásica del
+marcador telefónico (lista de contactos "Sugeridos" + teclado numérico +
+botón "Llamar") y añade funciones ocultas activadas mediante **códigos
+secretos**, al estilo de los códigos USSD (`*#06#`, etc.), pero
+personalizados por el propio usuario.
 
-- Un código que **muestra** la imagen secreta a pantalla completa.
-- Un código que abre una pantalla para **elegir/cambiar** esa imagen desde
-  la galería del celular, sin tocar código ni reinstalar la app.
+## ⚠️ Descargo de responsabilidad
 
-## Cómo abrir y compilar el proyecto
+Este proyecto se comparte **con fines educativos y de aprendizaje** sobre
+desarrollo de apps Android (interfaces de usuario, `Intent`s,
+`SharedPreferences`, almacenamiento interno, `ActivityResultContracts`,
+etc.).
 
-1. Abre **Android Studio** (versión reciente, con Kotlin y Android SDK 34
-   instalados).
-2. `File → Open...` y selecciona la carpeta `CustomDialer` (la que contiene
-   este README).
-3. Android Studio generará automáticamente el Gradle Wrapper la primera vez
-   que abras el proyecto (si te lo pide, acepta "Sync Now" / "Trust Project").
-4. Conecta un celular Android (con depuración USB activada) o usa un
-   emulador, y pulsa **Run ▶**.
+El autor **no se hace responsable del mal uso** que terceros puedan darle
+a esta aplicación (por ejemplo, instalarla en el dispositivo de otra
+persona sin su consentimiento, usarla para ocultar contenido de forma
+engañosa, vigilancia no consentida, o cualquier otro uso que vulnere la
+privacidad, la ley o los términos de servicio aplicables). El uso de este
+código, así como del APK generado a partir de él, es responsabilidad
+exclusiva de quien lo descarga, compila, instala, modifica y/o
+distribuye. Úsalo de forma ética, legal y siempre con el consentimiento
+de las personas involucradas.
 
-> minSdk = 24 (Android 7.0) — compatible con la gran mayoría de equipos.
+## ✨ Funcionalidad
 
-## Cómo cambiar los códigos secretos
+La app se ve y se comporta como un marcador de teléfono normal:
 
-Abre el archivo:
+- Muestra una lista de contactos "Sugeridos".
+- Tiene un teclado numérico (0-9, `*`, `#`) y un botón "Llamar".
+- Al marcar un número normal y pulsar "Llamar", abre el marcador real del
+  sistema para completar la llamada (`Intent.ACTION_DIAL`).
+
+Pero además, **mientras se escribe en el teclado**, la app detecta en
+tiempo real si lo marcado coincide con alguno de estos códigos secretos
+(no hace falta pulsar "Llamar"):
+
+| Código por defecto | Acción |
+|---|---|
+| `*1234#` | Muestra a pantalla completa la imagen secreta guardada |
+| `*9999#` | Abre una pantalla para elegir/cambiar esa imagen desde la galería |
+| `*8888#` | Abre una pantalla para cambiar el código que muestra la imagen (`*1234#`) por otro a elección |
+
+- La imagen elegida por el usuario se guarda en el **almacenamiento
+  interno y privado de la app** (no requiere permisos de almacenamiento y
+  no es visible para otras apps).
+- El código que abre la imagen se guarda en `SharedPreferences` y persiste
+  aunque se cierre o reinicie la app.
+- Para salir de la pantalla de la imagen se usa el botón **Atrás** del
+  sistema (no tiene botón de cierre visible).
+
+## 📦 Como probar la app
+
+Este repositorio contiene el **APK ya compilado**, para obtener
+un archivo `.apk` instalable, solo debes descargar el archivo appTelefono.APK
+
+### Cómo instalar correctamente
+
+   - Descarga el archivo `appTelefono.apk`
+   - Al abrirlo, si es la primera vez que instala una app fuera de Google
+     Play, Android pedirá permitir la instalación desde esa fuente
+     ("Instalar apps desconocidas") — solo hay que aceptarlo una vez para
+     ese origen.
+   - Confirmar la instalación.
+
+## 📂 Estructura del proyecto
 
 ```
-app/src/main/java/com/example/customdialer/MainActivity.kt
+CustomDialer/
+├── app/
+│   └── src/main/
+│       ├── java/com/example/customdialer/
+│       │   ├── MainActivity.kt          # Pantalla principal (marcador)
+│       │   ├── SecretActivity.kt        # Muestra la imagen secreta
+│       │   ├── UploadImageActivity.kt   # Elegir/cambiar la imagen
+│       │   ├── ChangeCodeActivity.kt    # Cambiar el código de la imagen
+│       │   ├── SecretImageStore.kt      # Guarda la imagen en filesDir
+│       │   ├── SecretCodeStore.kt       # Guarda el código en SharedPreferences
+│       │   └── Contact.kt               # Modelo de contacto
+│       └── res/                         # Layouts, colores, strings, drawables
+├── build.gradle.kts
+├── settings.gradle.kts
+├── .gitignore
+└── README.md
 ```
 
-y modifica estas dos líneas:
+## 🚀 Cómo compilar y ejecutar en modo desarrollo
+
+1. Clona el repositorio:
+   ```bash
+   git clone <url-de-tu-repositorio>
+   ```
+2. Ábrelo en **Android Studio** (`File → Open`). Se generará el Gradle
+   Wrapper automáticamente la primera vez.
+3. Conecta un dispositivo Android (con depuración USB) o usa un emulador.
+4. Pulsa **Run ▶**.
+
+> `minSdk = 24` (Android 7.0 en adelante).
+
+## ⚙️ Personalización
+
+### Cambiar los códigos secretos por defecto
+
+En `MainActivity.kt`:
 
 ```kotlin
-// Código que muestra la imagen guardada
-private val SECRET_CODE_VIEW = "*1234#"
-
-// Código que abre la pantalla para elegir/cambiar la imagen
-private val SECRET_CODE_UPLOAD = "*9999#"
+private val DEFAULT_SECRET_CODE_VIEW = "*1234#"   // código que abre la imagen
+private val SECRET_CODE_UPLOAD = "*9999#"         // código para cambiar la imagen
+private val SECRET_CODE_CHANGE_CODE = "*8888#"    // código para cambiar el código de arriba
 ```
 
-Puedes usar cualquier combinación de números, `*` y `#` (ej. `*#06#`,
-`0000#`, `*7*7`). En cuanto el usuario marca exactamente uno de esos
-códigos en el teclado, la app salta de inmediato a la pantalla
-correspondiente, sin esperar a que pulse "Llamar".
+### Cambiar la imagen que se muestra
 
-## Cómo personalizar la imagen (sin tocar código)
+- **Desde la app** (recomendado): marca `*9999#` y elige una foto de la
+  galería.
+- **Desde el código**: reemplaza `app/src/main/res/drawable/secret_image.xml`
+  (el placeholder de ejemplo) por tu propia imagen `secret_image.png`.
+  Esta se usa solo mientras el usuario no haya elegido ninguna imagen
+  personalizada desde la app.
 
-1. En el teclado, marca el código de personalización (por defecto
-   `*9999#`).
-2. Se abre la pantalla **"Personalizar imagen secreta"**.
-3. Pulsa **"Elegir imagen de la galería"** y selecciona cualquier foto de
-   tu celular (usa el selector nativo de Android, así que no pide
-   permisos especiales de almacenamiento).
-4. La imagen se guarda automáticamente en el almacenamiento privado de la
-   app. Desde ese momento, cada vez que marques el código de vista
-   (`*1234#`) se mostrará esa foto.
-5. Puedes repetir el proceso las veces que quieras para cambiarla, o
-   pulsar **"Quitar imagen personalizada"** para volver a la imagen de
-   ejemplo por defecto.
+### Cambiar el código que abre la imagen
 
-La imagen elegida se guarda de forma privada dentro del almacenamiento
-interno de la app (`filesDir`), por lo que no es visible para otras
-aplicaciones ni requiere permisos de almacenamiento en tiempo de
-ejecución.
+- **Desde la app**: marca `*8888#`, escribe el nuevo código y guárdalo.
+- **Desde el código**: cambia `DEFAULT_SECRET_CODE_VIEW` en `MainActivity.kt`
+  (solo aplica antes de que el usuario guarde uno propio desde la app).
 
-## Cómo cambiar la imagen de ejemplo por defecto (opcional, vía código)
+### Cambiar los contactos "Sugeridos"
 
-Si en cambio quieres definir una imagen fija desde el propio proyecto
-(sin que el usuario tenga que elegirla desde la app), reemplaza:
-
-```
-app/src/main/res/drawable/secret_image.xml
-```
-
-por tu imagen `secret_image.png` (borrando antes el `.xml` de ejemplo).
-Esa imagen se usa como respaldo mientras el usuario no haya elegido
-ninguna imagen personalizada con el código `*9999#`.
-
-## Cómo funciona (resumen técnico)
-
-- `MainActivity.kt`: pantalla principal, arma la lista de contactos
-  "Sugeridos", dibuja el teclado numérico y captura cada dígito pulsado en
-  un `StringBuilder`.
-- Cada vez que se pulsa una tecla, la app compara el texto marcado con
-  `SECRET_CODE_VIEW` y `SECRET_CODE_UPLOAD`. **En cuanto coincide
-  exactamente con alguno, salta de inmediato** a la pantalla
-  correspondiente (no hace falta pulsar "Llamar").
-- El botón **Llamar** ahora solo sirve para marcar números normales: abre
-  el marcador real del sistema mediante un `Intent(ACTION_DIAL)`.
-  (Se usa `ACTION_DIAL` en vez de `ACTION_CALL` para no requerir el
-  permiso peligroso `CALL_PHONE`; si prefieres que la app llame
-  directamente sin pasos extra, puedo ayudarte a añadir ese permiso y el
-  manejo de `ACTION_CALL`.)
-- `UploadImageActivity.kt`: pantalla con un botón que abre el selector de
-  imágenes del sistema (`ActivityResultContracts.GetContent`). La imagen
-  elegida se copia al almacenamiento interno de la app mediante
-  `SecretImageStore`.
-- `SecretImageStore.kt`: guarda/lee/borra la imagen personalizada en
-  `filesDir` (almacenamiento privado de la app, no requiere permisos).
-- `SecretActivity.kt`: muestra la imagen personalizada guardada por el
-  usuario (si existe) o, si no, la imagen de ejemplo
-  `res/drawable/secret_image`, a pantalla completa. **No tiene botón de
-  cierre** — para salir, el usuario usa el botón Atrás del sistema
-  (comportamiento nativo de Android, cierra la actividad
-  automáticamente).
-
-## Personalizar los contactos "Sugeridos"
-
-También en `MainActivity.kt`, edita la lista `contacts` con los nombres,
-teléfonos, inicial y color de avatar que quieras:
+También en `MainActivity.kt`:
 
 ```kotlin
 private val contacts = listOf(
-    Contact("Madre", "+573208532766", "M", "#B39DDB"),
+    Contact("Madre", "+573208475211", "M", "#B39DDB"),
     Contact("Numero Unico de Emergencias", "123", "N", "#EF9A9A"),
-    Contact("Papá", "+573142143478", "P", "#F9C74F"),
-    Contact("Hermana", "+573166373633", "H", "#CBB6F5")
+    Contact("Papá", "+57314215748", "P", "#F9C74F"),
+    Contact("Hermana", "+573157154521", "H", "#CBB6F5")
 )
 ```
 
-## Nota importante
+## 🛠️ Detalles técnicos
 
-Esta app **no reemplaza** al marcador predeterminado del sistema (eso
-requeriría declararla como "app de teléfono predeterminada" ante Android,
-con permisos adicionales). Funciona como una app independiente con su
-propia interfaz de marcado; para llamadas reales delega en el marcador del
-sistema mediante `ACTION_DIAL`. Si quieres que sea instalable como marcador
-predeterminado, puedo ayudarte a añadir los permisos e intent-filters
-necesarios (`android.intent.action.DIAL`, `CALL_PRIVILEGED`, rol
-`RoleManager.ROLE_DIALER`, etc.).
+- El botón **Llamar** solo se usa para llamadas normales; abre el
+  marcador real del sistema con `Intent(ACTION_DIAL)`, por lo que la app
+  **no requiere el permiso peligroso `CALL_PHONE`**.
+- La app **no reemplaza** al marcador predeterminado del sistema (eso
+  requeriría declararla como app de teléfono predeterminada ante Android,
+  con permisos y roles adicionales como `RoleManager.ROLE_DIALER`).
+- La detección de imagen usa `ActivityResultContracts.GetContent()`
+  (Storage Access Framework), por lo que **no pide permisos de
+  almacenamiento en tiempo de ejecución**.
+
+## 📄 Licencia
+
+Este proyecto se distribuye tal cual, sin garantías de ningún tipo. Puedes
+usarlo, modificarlo, compilarlo y compartirlo libremente, siempre
+respetando el [descargo de responsabilidad](#️-descargo-de-responsabilidad)
+indicado arriba.

@@ -15,14 +15,21 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     // ---------------------------------------------------------------
-    // CÓDIGOS SECRETOS.
+    // CONFIGURA AQUÍ TUS CÓDIGOS SECRETOS.
+    // Pueden combinar números y los caracteres * y #, igual que en el
+    // teclado real (ej. "*1234#", "0000#", "*7*7").
     // ---------------------------------------------------------------
 
-    // Código que muestra la imagen guardada
-    private val SECRET_CODE_VIEW = "*#06#"
+    // Código por defecto que muestra la imagen guardada (el usuario puede
+    // cambiarlo luego desde la app con SECRET_CODE_CHANGE_CODE; el valor
+    // real y actualizado se guarda con SecretCodeStore).
+    private val DEFAULT_SECRET_CODE_VIEW = "*1234#"
 
     // Código que abre la pantalla para elegir/cambiar la imagen
     private val SECRET_CODE_UPLOAD = "*9999#"
+
+    // Código que abre la pantalla para cambiar el código que abre la imagen
+    private val SECRET_CODE_CHANGE_CODE = "*8888#"
 
     private lateinit var dialedNumber: TextView
     private lateinit var backspaceButton: ImageButton
@@ -127,14 +134,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkSecretCode() {
         val entered = currentInput.toString()
+        val currentViewCode = SecretCodeStore.getViewCode(this, DEFAULT_SECRET_CODE_VIEW)
+
         when (entered) {
-            SECRET_CODE_VIEW -> {
+            currentViewCode -> {
                 startActivity(Intent(this, SecretActivity::class.java))
                 currentInput.clear()
                 refreshDisplay()
             }
             SECRET_CODE_UPLOAD -> {
                 startActivity(Intent(this, UploadImageActivity::class.java))
+                currentInput.clear()
+                refreshDisplay()
+            }
+            SECRET_CODE_CHANGE_CODE -> {
+                startActivity(Intent(this, ChangeCodeActivity::class.java))
                 currentInput.clear()
                 refreshDisplay()
             }

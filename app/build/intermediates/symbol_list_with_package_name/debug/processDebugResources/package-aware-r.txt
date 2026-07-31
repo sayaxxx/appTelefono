@@ -3253,6 +3253,7 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id currentCodeText
 id currentState
 id custom
 id customPanel
@@ -3447,6 +3448,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newCodeInput
 id noScroll
 id noState
 id none
@@ -3508,6 +3510,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id saveCodeButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3756,6 +3759,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_change_code
 layout activity_main
 layout activity_secret
 layout activity_upload
@@ -3885,6 +3889,13 @@ string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
 string cerrar
+string change_code_current_label
+string change_code_hint
+string change_code_invalid
+string change_code_save_button
+string change_code_saved
+string change_code_subtitle
+string change_code_title
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern

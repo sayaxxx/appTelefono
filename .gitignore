@@ -1,0 +1,45 @@
+# Gradle
+.gradle/
+build/
+app/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Local configuration file (contiene rutas del SDK, no se debe subir)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Archivos generados
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Logs
+*.log
+
+# Keystore de firma (nunca subir claves de firma)
+*.jks
+*.keystore
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de caché de Kotlin/Java
+*.hprof
+
+# Carpeta de salida de builds
+/captures
+/output.json

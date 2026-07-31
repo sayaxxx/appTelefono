@@ -28,6 +28,7 @@ id callIcon
 id contactName
 id contactPhone
 id contactsCard
+id currentCodeText
 id dialedNumber
 id digitText
 id key0
@@ -43,11 +44,14 @@ id key9
 id keyHash
 id keyStar
 id lettersText
+id newCodeInput
 id pickImageButton
 id previewImage
 id previewPlaceholder
 id removeImageButton
+id saveCodeButton
 id secretImageView
+layout activity_change_code
 layout activity_main
 layout activity_secret
 layout activity_upload
@@ -55,6 +59,13 @@ layout item_contact
 layout key_generic
 string app_name
 string cerrar
+string change_code_current_label
+string change_code_hint
+string change_code_invalid
+string change_code_save_button
+string change_code_saved
+string change_code_subtitle
+string change_code_title
 string llamar
 string pagina_principal
 string sugeridos

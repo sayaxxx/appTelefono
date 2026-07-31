@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\hipho\.gradle\caches\9.3.0\transforms\98f5de3d31010ec64bf89bb5ed54204d\workspace\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\hipho\.gradle\caches\9.3.0\transforms\33e0a51e0829b4f27d15d6d8b706fb01\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\hipho\.gradle\caches\9.3.0\transforms\37ae0b4ef93e179fd0b23c38656d9a71\workspace\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -59,8 +59,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\hipho\.gradle\caches\9.3.0\tra
 	xmlns:android
 		ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:4:5-30:19
-INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:4:5-30:19
+ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:4:5-34:19
+INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:4:5-34:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\hipho\.gradle\caches\9.3.0\transforms\98f5de3d31010ec64bf89bb5ed54204d\workspace\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\hipho\.gradle\caches\9.3.0\transforms\98f5de3d31010ec64bf89bb5ed54204d\workspace\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\hipho\.gradle\caches\9.3.0\transforms\33e0a51e0829b4f27d15d6d8b706fb01\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -123,6 +123,12 @@ ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xm
 		ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
 		ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:27:13-48
+activity#com.example.customdialer.ChangeCodeActivity
+ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml:31:13-47
 uses-sdk
 INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\hipho\Downloads\CustomDialer\app\src\main\AndroidManifest.xml

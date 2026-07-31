@@ -14,4 +14,11 @@
     <string name="upload_saved">Imagen guardada correctamente</string>
     <string name="upload_removed">Imagen personalizada eliminada</string>
     <string name="upload_error">No se pudo guardar la imagen</string>
+    <string name="change_code_title">Cambiar código de la imagen</string>
+    <string name="change_code_subtitle">Este es el código que, al marcarlo, muestra la imagen secreta. Escribe uno nuevo usando números, * y #.</string>
+    <string name="change_code_hint">Nuevo código (ej. *1234#)</string>
+    <string name="change_code_current_label">Código actual:</string>
+    <string name="change_code_save_button">Guardar nuevo código</string>
+    <string name="change_code_saved">Código actualizado correctamente</string>
+    <string name="change_code_invalid">Escribe un código válido (solo números, * y #)</string>
 </resources>
